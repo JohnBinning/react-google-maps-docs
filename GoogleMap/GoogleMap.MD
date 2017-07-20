@@ -5,7 +5,7 @@ const GMap = withGoogleMap((props) => {
   return (
     <div>
     <GoogleMap
-      //defaultOptions={{ styles: mapStyle}} for custom styles
+      defaultOptions={{ styles: mapStyle}} //for custom styles
       defaultZoom={2} 
       defaultCenter={{ lat: 21.9071923, lng: -45.0368707 }}>
           {markers.map(createMarkers)}
@@ -18,7 +18,8 @@ const GMap = withGoogleMap((props) => {
 Then call Gmap
 
 ```javascript
-//import createMarkers from createMarkers file
+//import createMarkers from Markers/Markers.MD
+//import createHeatmap from Heatmap/Heatmap.MD
 
 render() {
 
@@ -38,6 +39,7 @@ render() {
         containerElement={ <div className='container-element' style={{ height: mapHeight, width: mapWidth}}/>}
         markers={markerList}
         createMarkers={(marker) => createMarkers(marker)}
+        createHeat={() => createHeatMap()}
         className="g-map"
       />
       </div>
