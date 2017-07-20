@@ -1,5 +1,7 @@
 
 ```javascript
+//import mapStyle from mapStyle
+
 const GMap = withGoogleMap((props) => {
   let {  markers, createMarkers } = props
   return (
