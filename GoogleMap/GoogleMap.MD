@@ -7,7 +7,7 @@ const GMap = withGoogleMap((props) => {
   return (
     <div>
     <GoogleMap
-      defaultOptions={{ styles: mapStyle}} //for custom styles
+      defaultOptions={{ styles: mapStyle }} //for custom styles
       defaultZoom={2} 
       defaultCenter={{ lat: 21.9071923, lng: -45.0368707 }}>
           {markers.map(createMarkers)}
@@ -31,9 +31,9 @@ render() {
 
     //the markers prop below takes an array of objects.  each object must have a key of coordinates that has a value of an object, with keys of lat and lng.
     const markerList = [
-        { coordinates: {lat: 39.7392358, lng: -104.990251},
-        { coordinates: {lat: 41.8781136, lng: -87.6297982},
-        ]
+         { coordinates: {lat: 39.7392358, lng: -104.990251} },
+         { coordinates: {lat: 41.8781136, lng: -87.6297982} },
+     ]
 
     return (
       <div>
